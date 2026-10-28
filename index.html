@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bizzye · LB TECH LTDA — Desenvolvimento de software e apps</title>
+  <meta name="description" content="Bizzye é a marca da LB TECH LTDA (CNPJ 57.462.404/0001-14): desenvolvimento de aplicativos mobile, sistemas web e software sob encomenda. Criadores do app Cestou." />
+  <link rel="canonical" href="https://bizzye.dev/" />
+  <meta name="theme-color" content="#0a0d0c" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bizzye.dev/" />
+  <meta property="og:title" content="Bizzye · LB TECH LTDA" />
+  <meta property="og:description" content="Desenvolvimento de aplicativos mobile, sistemas web e software sob encomenda." />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%2310B981'/%3E%3Cpath d='M17 14h9a6 6 0 0 1 0 12h-9zM17 26h11a6 6 0 0 1 0 12H17z' fill='none' stroke='%23fff' stroke-width='3.2' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Bizzye",
+    "legalName": "LB TECH LTDA",
+    "taxID": "57.462.404/0001-14",
+    "url": "https://bizzye.dev",
+    "email": "contato@bizzye.dev",
+    "address": { "@type": "PostalAddress", "addressLocality": "Niterói", "addressRegion": "RJ", "addressCountry": "BR" }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0a0d0c;
+      --bg2: #0f1412;
+      --card: #121815;
+      --card2: #161d1a;
+      --bd: #222b27;
+      --bd2: #2c3732;
+      --tx: #f4f4f5;
+      --tx2: #c4c4cc;
+      --tx3: #8b8b96;
+      --acc: #34d399;
+      --acc2: #10b981;
+      --acc3: #059669;
+      --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      --sans: 'Inter', -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      --r: 16px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--tx);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; }
+    img, svg { display: block; }
+
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    .mono { font-family: var(--mono); }
+    .kicker {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--acc);
+      letter-spacing: .02em;
+      margin: 0 0 12px;
+    }
+    h1, h2, h3 { margin: 0; letter-spacing: -.03em; line-height: 1.1; }
+    h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; }
+    .lead { color: var(--tx2); font-size: 18px; max-width: 620px; }
+
+    /* ---------- nav ---------- */
+    .nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(10, 13, 12, .78);
+      backdrop-filter: saturate(160%) blur(12px);
+      -webkit-backdrop-filter: saturate(160%) blur(12px);
+      border-bottom: 1px solid var(--bd);
+    }
+    .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; font-size: 19px; letter-spacing: -.03em; }
+    .brand-mark {
+      width: 32px; height: 32px; border-radius: 9px;
+      background: linear-gradient(135deg, var(--acc2), var(--acc3));
+      display: grid; place-items: center;
+    }
+    .brand-dot { color: var(--acc); }
+    .nav-links { display: flex; gap: 28px; font-size: 14px; color: var(--tx3); }
+    .nav-links a { text-decoration: none; transition: color .15s; }
+    .nav-links a:hover { color: var(--tx); }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 20px; border-radius: 10px;
+      font-weight: 600; font-size: 15px; text-decoration: none;
+      transition: transform .15s, background .15s, border-color .15s;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--acc); color: #04140d; }
+    .btn-primary:hover { background: #4ee0ab; }
+    .btn-ghost { border: 1px solid var(--bd2); color: var(--tx); }
+    .btn-ghost:hover { border-color: var(--acc3); }
+    .btn-sm { padding: 8px 14px; font-size: 14px; }
+
+    /* ---------- hero ---------- */
+    .hero { position: relative; padding: 112px 0 96px; overflow: hidden; }
+    .hero::before {
+      content: ""; position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px);
+      background-size: 26px 26px;
+      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 75%);
+              mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 75%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: ""; position: absolute; width: 640px; height: 640px;
+      left: 50%; top: -320px; transform: translateX(-50%);
+      background: radial-gradient(circle, rgba(16,185,129,.20), transparent 65%);
+      pointer-events: none;
+    }
+    .hero .wrap { position: relative; z-index: 1; }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--mono); font-size: 13px; color: var(--tx2);
+      border: 1px solid var(--bd2); background: var(--bg2);
+      padding: 6px 12px; border-radius: 999px; margin-bottom: 28px;
+    }
+    .pill i { width: 8px; height: 8px; border-radius: 50%; background: var(--acc); box-shadow: 0 0 0 4px rgba(52,211,153,.15); }
+    .hero h1 { font-size: clamp(40px, 7vw, 76px); font-weight: 800; max-width: 900px; }
+    .hero h1 .grad {
+      background: linear-gradient(90deg, var(--acc), #a7f3d0);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero .lead { margin: 24px 0 36px; font-size: 19px; }
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    .terminal {
+      margin-top: 64px; max-width: 640px;
+      background: var(--card); border: 1px solid var(--bd); border-radius: 14px;
+      box-shadow: 0 30px 80px -30px rgba(0,0,0,.8);
+      overflow: hidden;
+    }
+    .terminal-bar { display: flex; gap: 6px; padding: 12px 14px; border-bottom: 1px solid var(--bd); }
+    .terminal-bar span { width: 11px; height: 11px; border-radius: 50%; background: var(--bd2); }
+    .terminal pre {
+      margin: 0; padding: 18px 20px; font-family: var(--mono); font-size: 14px; line-height: 1.8;
+      color: var(--tx2); white-space: pre-wrap; word-break: break-word;
+    }
+    .terminal .p { color: var(--acc); }
+    .terminal .c { color: var(--tx3); }
+
+    /* ---------- sections ---------- */
+    section { padding: 96px 0; }
+    .sec-head { margin-bottom: 48px; }
+    .sec-head .lead { margin-top: 14px; }
+
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card {
+      background: var(--card); border: 1px solid var(--bd); border-radius: var(--r);
+      padding: 28px; transition: border-color .2s, transform .2s;
+    }
+    .card:hover { border-color: var(--bd2); transform: translateY(-2px); }
+    .card .ico {
+      width: 42px; height: 42px; border-radius: 10px; margin-bottom: 18px;
+      display: grid; place-items: center;
+      background: rgba(52,211,153,.10); border: 1px solid rgba(52,211,153,.22); color: var(--acc);
+    }
+    .card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; letter-spacing: -.02em; }
+    .card p { margin: 0; color: var(--tx3); font-size: 15px; }
+
+    /* ---------- produto ---------- */
+    .product {
+      display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center;
+      background: linear-gradient(160deg, var(--card2), var(--card));
+      border: 1px solid var(--bd); border-radius: 24px; padding: 56px;
+      position: relative; overflow: hidden;
+    }
+    .product::after {
+      content: ""; position: absolute; right: -160px; bottom: -160px; width: 420px; height: 420px;
+      background: radial-gradient(circle, rgba(16,185,129,.18), transparent 65%);
+      pointer-events: none;
+    }
+    .product-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .product-logo strong { font-size: 30px; font-weight: 800; letter-spacing: -.03em; }
+    .tag {
+      font-family: var(--mono); font-size: 12px; color: var(--acc);
+      border: 1px solid rgba(52,211,153,.3); border-radius: 999px; padding: 3px 10px;
+    }
+    .product h3 { font-size: clamp(22px, 3vw, 28px); font-weight: 700; margin-bottom: 14px; }
+    .product p { color: var(--tx2); margin: 0 0 24px; }
+    .checks { list-style: none; padding: 0; margin: 0 0 28px; display: grid; gap: 10px; }
+    .checks li { display: flex; gap: 10px; color: var(--tx2); font-size: 15px; }
+    .checks li::before { content: "✓"; color: var(--acc); font-weight: 700; }
+
+    .receipt {
+      position: relative; z-index: 1;
+      background: var(--bg); border: 1px solid var(--bd); border-radius: 16px; padding: 22px;
+      font-family: var(--mono); font-size: 13px;
+    }
+    .receipt .row { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px dashed var(--bd); }
+    .receipt .row:last-child { border-bottom: 0; }
+    .receipt .raw { color: var(--tx3); }
+    .receipt .clean { color: var(--tx); font-family: var(--sans); font-weight: 600; }
+    .receipt .down { color: var(--acc); white-space: nowrap; }
+    .receipt .label { color: var(--tx3); font-size: 12px; margin-bottom: 6px; }
+
+    /* ---------- contato ---------- */
+    .contact { text-align: center; }
+    .contact .lead { margin: 14px auto 32px; }
+    .contact .cta { justify-content: center; }
+
+    /* ---------- footer ---------- */
+    footer { border-top: 1px solid var(--bd); background: var(--bg2); padding: 56px 0 40px; }
+    .foot { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 40px; }
+    .foot h4 {
+      font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--tx3);
+      text-transform: uppercase; letter-spacing: .08em; margin: 0 0 14px;
+    }
+    .foot p { margin: 0 0 6px; color: var(--tx2); font-size: 14px; }
+    .foot a { color: var(--tx2); text-decoration: none; }
+    .foot a:hover { color: var(--acc); }
+    .legal dl { margin: 0; display: grid; gap: 10px; }
+    .legal dt { font-size: 12px; color: var(--tx3); }
+    .legal dd { margin: 0; font-size: 15px; font-weight: 600; color: var(--tx); }
+    .copy {
+      margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--bd);
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;
+      font-size: 13px; color: var(--tx3);
+    }
+
+    /* ---------- responsivo ---------- */
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .product { grid-template-columns: 1fr; padding: 36px; }
+      .foot { grid-template-columns: 1fr 1fr; }
+      .foot .legal { grid-column: 1 / -1; }
+    }
+    @media (max-width: 640px) {
+      .wrap { padding: 0 16px; }
+      .nav-links { display: none; }
+      .hero { padding: 72px 0 64px; }
+      section { padding: 72px 0; }
+      .grid { grid-template-columns: 1fr; }
+      .product { padding: 24px; }
+      .foot { grid-template-columns: 1fr; }
+      .terminal pre { font-size: 12.5px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn, .card { transition: none; }
+      .btn:hover, .card:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="#topo" aria-label="Bizzye — início">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"><path d="M7 4h6a4 4 0 0 1 0 8H7zM7 12h7.5a4 4 0 0 1 0 8H7z"/></svg>
+        </span>
+        <span>bizzye<span class="brand-dot">.dev</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Seções">
+        <a href="#servicos">Serviços</a>
+        <a href="#cestou">Cestou</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a class="btn btn-ghost btn-sm" href="mailto:contato@bizzye.dev">Fale com a gente</a>
+    </div>
+  </header>
+
+  <main id="topo">
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="wrap">
+        <span class="pill"><i></i>LB TECH LTDA · Niterói, RJ</span>
+        <h1>Software sob medida e <span class="grad">apps que resolvem</span> problemas reais.</h1>
+        <p class="lead">
+          A Bizzye é a marca de tecnologia da LB TECH LTDA. Projetamos, desenvolvemos e mantemos
+          aplicativos mobile, sistemas web e serviços em nuvem — do protótipo à publicação nas lojas.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#cestou">Conheça o Cestou</a>
+          <a class="btn btn-ghost" href="#servicos">Nossos serviços</a>
+        </div>
+
+        <div class="terminal" aria-hidden="true">
+          <div class="terminal-bar"><span></span><span></span><span></span></div>
+          <pre><span class="p">$</span> bizzye build --app cestou --platform ios,android
+<span class="c">✓ ideia validada com quem usa</span>
+<span class="c">✓ design, código e testes</span>
+<span class="c">✓ publicação na App Store e Google Play</span>
+<span class="p">→</span> pronto para o mundo.</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVIÇOS ================= -->
+    <section id="servicos">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker">// o que fazemos</p>
+          <h2>Tecnologia de ponta a ponta</h2>
+          <p class="lead">Do primeiro rascunho ao suporte em produção, cuidamos de cada etapa do seu produto digital.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+            </div>
+            <h3>Aplicativos mobile</h3>
+            <p>Apps nativos e multiplataforma para iOS e Android, publicados e mantidos na App Store e no Google Play.</p>
+          </article>
+
+          <article class="card">
+            <div class="ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+            </div>
+            <h3>Software sob encomenda</h3>
+            <p>Sistemas desenhados para o seu processo, com código limpo, testado e documentado.</p>
+          </article>
+
+          <article class="card">
+            <div class="ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+            </div>
+            <h3>Web design e sistemas web</h3>
+            <p>Sites, landing pages e painéis rápidos, responsivos e otimizados para busca.</p>
+          </article>
+
+          <article class="card">
+            <div class="ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 0-9h-1.3A7 7 0 1 0 4 15.3"/><path d="M12 13v8M8.5 17.5 12 21l3.5-3.5"/></svg>
+            </div>
+            <h3>Cloud e hospedagem</h3>
+            <p>APIs, bancos de dados e infraestrutura em nuvem para aplicações e serviços na internet.</p>
+          </article>
+
+          <article class="card">
+            <div class="ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V16h8v-1.3A7 7 0 0 0 12 2Z"/></svg>
+            </div>
+            <h3>Consultoria em TI</h3>
+            <p>Arquitetura, escolha de stack e revisão técnica para tirar seu projeto do papel com segurança.</p>
+          </article>
+
+          <article class="card">
+            <div class="ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>
+            </div>
+            <h3>Suporte e manutenção</h3>
+            <p>Monitoramento, correções e evolução contínua dos sistemas depois do lançamento.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRODUTO: CESTOU ================= -->
+    <section id="cestou">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker">// nosso produto</p>
+          <h2>Feito pela Bizzye</h2>
+        </div>
+
+        <div class="product">
+          <div>
+            <div class="product-logo">
+              <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+                <defs><linearGradient id="cg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10B981"/><stop offset="1" stop-color="#059669"/></linearGradient></defs>
+                <rect width="48" height="48" rx="12" fill="url(#cg)"/>
+                <g transform="translate(12 12)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4.5 9.5h15M6 9.5l1.6 9h8.8l1.6-9M9.3 9.5c0-4.4 5.4-4.4 5.4 0"/>
+                  <path d="M9.8 13.6l1.9 1.9 3-3.2"/>
+                </g>
+              </svg>
+              <strong>Cestou</strong>
+              <span class="tag">iOS · Android</span>
+            </div>
+            <h3>O controle de compras do seu negócio.</h3>
+            <p>
+              Aponte a câmera para o QR code do cupom fiscal e a compra vira controle: o Cestou lê a nota,
+              padroniza os nomes dos produtos e monta o histórico de preço de cada item — sem digitar nada.
+            </p>
+            <ul class="checks">
+              <li>Leitura da nota por QR code, foto, PDF ou XML</li>
+              <li>Histórico de preço por produto, entre lojas diferentes</li>
+              <li>Mostra onde está mais barato e quanto o custo subiu</li>
+            </ul>
+            <a class="btn btn-primary" href="https://www.cestou.net" target="_blank" rel="noopener">Visitar cestou.net</a>
+          </div>
+
+          <div class="receipt" aria-label="Exemplo: nome abreviado da nota vira nome padronizado">
+            <p class="label">nota fiscal → Cestou</p>
+            <div class="row"><span class="raw">LTE INT PIRAC 1L</span><span class="down">R$ 4,79 ↓</span></div>
+            <div class="row"><span class="clean">Leite Integral Piracanjuba 1L</span></div>
+            <div class="row"><span class="raw">AMA URCA 1,5L COCO</span><span class="down">R$ 9,90 ↓</span></div>
+            <div class="row"><span class="clean">Amaciante Coco Urca 1,5L</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTATO ================= -->
+    <section id="contato" class="contact">
+      <div class="wrap">
+        <p class="kicker">// vamos conversar</p>
+        <h2>Tem um projeto em mente?</h2>
+        <p class="lead">Conte o que você precisa. Respondemos pelo nosso e-mail oficial.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="mailto:contato@bizzye.dev">contato@bizzye.dev</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= RODAPÉ (dados para validação) ================= -->
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div class="legal">
+          <h4>Dados da empresa</h4>
+          <dl>
+            <div><dt>Razão social</dt><dd>LB TECH LTDA</dd></div>
+            <div><dt>CNPJ</dt><dd>57.462.404/0001-14</dd></div>
+            <div><dt>E-mail</dt><dd><a href="mailto:contato@bizzye.dev">contato@bizzye.dev</a></dd></div>
+          </dl>
+        </div>
+        <div>
+          <h4>Navegação</h4>
+          <p><a href="#servicos">Serviços</a></p>
+          <p><a href="#cestou">Cestou</a></p>
+          <p><a href="#contato">Contato</a></p>
+        </div>
+        <div>
+          <h4>Cestou</h4>
+          <p><a href="https://www.cestou.net" target="_blank" rel="noopener">Site do app</a></p>
+          <p><a href="https://www.cestou.net/privacidade" target="_blank" rel="noopener">Política de Privacidade</a></p>
+          <p><a href="https://www.cestou.net/termos" target="_blank" rel="noopener">Termos de Uso</a></p>
+        </div>
+      </div>
+      <div class="copy">
+        <span>© <span id="ano">2026</span> LB TECH LTDA · CNPJ 57.462.404/0001-14 · Todos os direitos reservados.</span>
+        <span class="mono">bizzye.dev</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
+</body>
+</html>
